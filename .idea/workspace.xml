@@ -6,6 +6,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/khoruougiasi.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/license.txt" afterDir="false" />
@@ -4935,12 +4936,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546005246025</updated>
-      <workItem from="1546005248186" duration="1515000" />
+      <workItem from="1546005248186" duration="1868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1515000" />
+    <option name="totallyTimeSpent" value="1868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="770" extended-state="6" />
