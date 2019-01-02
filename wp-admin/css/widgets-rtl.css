@@ -164,9 +164,13 @@
 }
 
 .media-widget-gallery-preview {
+<<<<<<< HEAD
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-pack: start;
+=======
+	display: flex;
+>>>>>>> causn
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	margin: -1.79104477%;
@@ -221,11 +225,16 @@
 	bottom: 0;
 	width: 100%;
 	box-sizing: border-box;
+<<<<<<< HEAD
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
 	-webkit-box-pack: center;
+=======
+	display: flex;
+	align-items: center;
+>>>>>>> causn
 	justify-content: center;
 	background-color: rgba( 0, 0, 0, .5 );
 }

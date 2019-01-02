@@ -45,7 +45,11 @@ class WP_Locale_Switcher {
 	 * @since 4.7.0
 	 */
 	public function __construct() {
+<<<<<<< HEAD
 		$this->original_locale     = is_admin() ? get_user_locale() : get_locale();
+=======
+		$this->original_locale     = determine_locale();
+>>>>>>> causn
 		$this->available_languages = array_merge( array( 'en_US' ), get_available_languages() );
 	}
 
@@ -67,7 +71,11 @@ class WP_Locale_Switcher {
 	 * @return bool True on success, false on failure.
 	 */
 	public function switch_to_locale( $locale ) {
+<<<<<<< HEAD
 		$current_locale = is_admin() ? get_user_locale() : get_locale();
+=======
+		$current_locale = determine_locale();
+>>>>>>> causn
 		if ( $current_locale === $locale ) {
 			return false;
 		}

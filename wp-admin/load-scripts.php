@@ -28,13 +28,22 @@ require( ABSPATH . 'wp-admin/includes/noop.php' );
 require( ABSPATH . WPINC . '/script-loader.php' );
 require( ABSPATH . WPINC . '/version.php' );
 
+<<<<<<< HEAD
 $compress = ( isset($_GET['c']) && $_GET['c'] );
 $force_gzip = ( $compress && 'gzip' == $_GET['c'] );
+=======
+>>>>>>> causn
 $expires_offset = 31536000; // 1 year
 $out = '';
 
 $wp_scripts = new WP_Scripts();
+<<<<<<< HEAD
 wp_default_scripts($wp_scripts);
+=======
+wp_default_scripts( $wp_scripts );
+wp_default_packages_vendor( $wp_scripts );
+wp_default_packages_scripts( $wp_scripts );
+>>>>>>> causn
 
 if ( isset( $_SERVER['HTTP_IF_NONE_MATCH'] ) && stripslashes( $_SERVER['HTTP_IF_NONE_MATCH'] ) === $wp_version ) {
 	$protocol = $_SERVER['SERVER_PROTOCOL'];
@@ -58,6 +67,7 @@ header('Content-Type: application/javascript; charset=UTF-8');
 header('Expires: ' . gmdate( "D, d M Y H:i:s", time() + $expires_offset ) . ' GMT');
 header("Cache-Control: public, max-age=$expires_offset");
 
+<<<<<<< HEAD
 if ( $compress && ! ini_get('zlib.output_compression') && 'ob_gzhandler' != ini_get('output_handler') && isset($_SERVER['HTTP_ACCEPT_ENCODING']) ) {
 	header('Vary: Accept-Encoding'); // Handle proxies
 	if ( false !== stripos($_SERVER['HTTP_ACCEPT_ENCODING'], 'deflate') && function_exists('gzdeflate') && ! $force_gzip ) {
@@ -69,5 +79,7 @@ if ( $compress && ! ini_get('zlib.output_compression') && 'ob_gzhandler' != ini_
 	}
 }
 
+=======
+>>>>>>> causn
 echo $out;
 exit;

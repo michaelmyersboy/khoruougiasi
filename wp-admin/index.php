@@ -103,6 +103,7 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <div class="wrap">
 	<h1><?php echo esc_html( $title ); ?></h1>
 
+<<<<<<< HEAD
 <?php if ( has_action( 'try_gutenberg_panel' ) ) :
 	$classes = 'try-gutenberg-panel';
 
@@ -129,6 +130,8 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 		?>
 	</div>
 <?php endif; ?>
+=======
+>>>>>>> causn
 <?php if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) ) :
 	$classes = 'welcome-panel';
 

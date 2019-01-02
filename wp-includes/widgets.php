@@ -775,7 +775,11 @@ function dynamic_sidebar( $index = 1 ) {
 }
 
 /**
+<<<<<<< HEAD
  * Whether widget is displayed on the front end.
+=======
+ * Determines whether a given widget is displayed on the front end.
+>>>>>>> causn
  *
  * Either $callback or $id_base can be used
  * $id_base is the first argument when extending WP_Widget class
@@ -786,7 +790,15 @@ function dynamic_sidebar( $index = 1 ) {
  *
  * NOTE: $widget_id and $id_base are the same for single widgets. To be effective
  * this function has to run after widgets have initialized, at action {@see 'init'} or later.
+<<<<<<< HEAD
  *
+=======
+ * 
+ * For more information on this and similar theme functions, check out
+ * the {@link https://developer.wordpress.org/themes/basics/conditional-tags/ 
+ * Conditional Tags} article in the Theme Developer Handbook.
+ * 
+>>>>>>> causn
  * @since 2.2.0
  *
  * @global array $wp_registered_widgets
@@ -822,8 +834,17 @@ function is_active_widget( $callback = false, $widget_id = false, $id_base = fal
 }
 
 /**
+<<<<<<< HEAD
  * Whether the dynamic sidebar is enabled and used by theme.
  *
+=======
+ * Determines whether the dynamic sidebar is enabled and used by the theme.
+ * 
+ * For more information on this and similar theme functions, check out
+ * the {@link https://developer.wordpress.org/themes/basics/conditional-tags/ 
+ * Conditional Tags} article in the Theme Developer Handbook.
+ * 
+>>>>>>> causn
  * @since 2.2.0
  *
  * @global array $wp_registered_widgets
@@ -845,8 +866,17 @@ function is_dynamic_sidebar() {
 }
 
 /**
+<<<<<<< HEAD
  * Whether a sidebar is in use.
  *
+=======
+ * Determines whether a sidebar is in use.
+ * 
+ * For more information on this and similar theme functions, check out
+ * the {@link https://developer.wordpress.org/themes/basics/conditional-tags/ 
+ * Conditional Tags} article in the Theme Developer Handbook.
+ * 
+>>>>>>> causn
  * @since 2.8.0
  *
  * @param string|int $index Sidebar name, id or number to check.

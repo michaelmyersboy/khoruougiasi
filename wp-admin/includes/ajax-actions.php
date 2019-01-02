@@ -1341,8 +1341,11 @@ function wp_ajax_add_meta() {
 		$value = wp_unslash( $_POST['meta'][$mid]['value'] );
 		if ( '' == trim($key) )
 			wp_die( __( 'Please provide a custom field name.' ) );
+<<<<<<< HEAD
 		if ( '' == trim($value) )
 			wp_die( __( 'Please provide a custom field value.' ) );
+=======
+>>>>>>> causn
 		if ( ! $meta = get_metadata_by_mid( 'post', $mid ) )
 			wp_die( 0 ); // if meta doesn't exist
 		if ( is_protected_meta( $meta->meta_key, 'post' ) || is_protected_meta( $key, 'post' ) ||
@@ -1485,6 +1488,7 @@ function wp_ajax_update_welcome_panel() {
 }
 
 /**
+<<<<<<< HEAD
  * Ajax handler for updating whether to display the Try Gutenberg panel.
  *
  * @since 4.9.8
@@ -1498,6 +1502,8 @@ function wp_ajax_update_try_gutenberg_panel() {
 }
 
 /**
+=======
+>>>>>>> causn
  * Ajax handler for retrieving menu meta boxes.
  *
  * @since 3.1.0
@@ -2105,7 +2111,15 @@ function wp_ajax_upload_attachment() {
 		$post_id = null;
 	}
 
+<<<<<<< HEAD
 	$post_data = isset( $_REQUEST['post_data'] ) ? $_REQUEST['post_data'] : array();
+=======
+	$post_data = ! empty( $_REQUEST['post_data'] ) ? _wp_get_allowed_postdata( _wp_translate_postdata( false, (array) $_REQUEST['post_data'] ) ) : array();
+
+	if ( is_wp_error( $post_data ) ) {
+		wp_die( $post_data->get_error_message() );
+	}
+>>>>>>> causn
 
 	// If the context is custom header or background, make sure the uploaded file is an image.
 	if ( isset( $post_data['context'] ) && in_array( $post_data['context'], array( 'custom-header', 'custom-background' ) ) ) {

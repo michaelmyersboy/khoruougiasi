@@ -173,12 +173,28 @@ final class WP_oEmbed_Controller {
 			$args['height'] = $args['maxheight'];
 		}
 
+<<<<<<< HEAD
+=======
+		// Short-circuit process for URLs belonging to the current site.
+		$data = get_oembed_response_data_for_url( $url, $args );
+
+		if ( $data ) {
+			return $data;
+		}
+
+>>>>>>> causn
 		$data = _wp_oembed_get_object()->get_data( $url, $args );
 
 		if ( false === $data ) {
 			return new WP_Error( 'oembed_invalid_url', get_status_header_desc( 404 ), array( 'status' => 404 ) );
 		}
 
+<<<<<<< HEAD
+=======
+		/** This filter is documented in wp-includes/class-oembed.php */
+		$data->html = apply_filters( 'oembed_result', _wp_oembed_get_object()->data2html( (object) $data, $url ), $url, $args );
+
+>>>>>>> causn
 		/**
 		 * Filters the oEmbed TTL value (time to live).
 		 *

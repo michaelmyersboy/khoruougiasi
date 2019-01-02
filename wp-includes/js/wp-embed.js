@@ -28,6 +28,14 @@
 
 	window.wp.receiveEmbedMessage = function( e ) {
 		var data = e.data;
+<<<<<<< HEAD
+=======
+
+		if ( ! data ) {
+			return;
+		}
+
+>>>>>>> causn
 		if ( ! ( data.secret || data.message || data.value ) ) {
 			return;
 		}

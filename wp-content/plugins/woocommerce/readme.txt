@@ -3,7 +3,11 @@ Contributors: automattic, mikejolley, jameskoster, claudiosanches, claudiulodro,
 Tags: ecommerce, e-commerce, store, sales, sell, shop, cart, checkout, downloadable, downloads, paypal, storefront, woo commerce
 Requires at least: 4.7
 Tested up to: 5.0
+<<<<<<< HEAD
 Stable tag: 3.5.2
+=======
+Stable tag: 3.5.3
+>>>>>>> causn
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -158,6 +162,12 @@ Yes you can! Join in on our [GitHub repository](https://github.com/woocommerce/w
 
 == Changelog ==
 
+<<<<<<< HEAD
+=======
+= 3.5.3 - 2018-12-20 =
+* Fix - Fix orders list in the admin after a change introduced in WordPress 5.0.2. #22273
+
+>>>>>>> causn
 = 3.5.2 - 2018-11-29 =
 * Enhancement - Added compatibility for Twenty Nineteen theme. #21970
 * Update - Prepare WooCommerce for PHP 7.3. #22009

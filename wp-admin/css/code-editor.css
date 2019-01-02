@@ -70,3 +70,10 @@
 .CodeMirror {
 	text-align: left;
 }
+<<<<<<< HEAD
+=======
+
+.wrap .CodeMirror .CodeMirror-linenumber { 
+    color: #666; 
+}
+>>>>>>> causn

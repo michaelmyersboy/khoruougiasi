@@ -343,7 +343,11 @@ function wp_read_image_metadata( $file ) {
 	if ( ! file_exists( $file ) )
 		return false;
 
+<<<<<<< HEAD
 	list( , , $sourceImageType ) = @getimagesize( $file );
+=======
+	list( , , $image_type ) = @getimagesize( $file );
+>>>>>>> causn
 
 	/*
 	 * EXIF contains a bunch of data we'll probably never need formatted in ways
@@ -420,6 +424,11 @@ function wp_read_image_metadata( $file ) {
 		 }
 	}
 
+<<<<<<< HEAD
+=======
+	$exif = array(); 
+
+>>>>>>> causn
 	/**
 	 * Filters the image types to check for exif data.
 	 *
@@ -427,7 +436,13 @@ function wp_read_image_metadata( $file ) {
 	 *
 	 * @param array $image_types Image types to check for exif data.
 	 */
+<<<<<<< HEAD
 	if ( is_callable( 'exif_read_data' ) && in_array( $sourceImageType, apply_filters( 'wp_read_image_metadata_types', array( IMAGETYPE_JPEG, IMAGETYPE_TIFF_II, IMAGETYPE_TIFF_MM ) ) ) ) {
+=======
+	$exif_image_types = apply_filters( 'wp_read_image_metadata_types', array( IMAGETYPE_JPEG, IMAGETYPE_TIFF_II, IMAGETYPE_TIFF_MM ) );
+
+	if ( is_callable( 'exif_read_data' ) && in_array( $image_type, $exif_image_types ) ) {
+>>>>>>> causn
 		$exif = @exif_read_data( $file );
 
 		if ( ! empty( $exif['ImageDescription'] ) ) {
@@ -505,6 +520,7 @@ function wp_read_image_metadata( $file ) {
 	 *
 	 * @since 2.5.0
 	 * @since 4.4.0 The `$iptc` parameter was added.
+<<<<<<< HEAD
 	 *
 	 * @param array  $meta            Image meta data.
 	 * @param string $file            Path to image file.
@@ -512,6 +528,17 @@ function wp_read_image_metadata( $file ) {
 	 * @param array  $iptc            IPTC data.
 	 */
 	return apply_filters( 'wp_read_image_metadata', $meta, $file, $sourceImageType, $iptc );
+=======
+	 * @since 5.0.0 The `$exif` parameter was added.
+	 *
+	 * @param array  $meta       Image meta data.
+	 * @param string $file       Path to image file.
+	 * @param int    $image_type Type of image, one of the `IMAGETYPE_XXX` constants.
+	 * @param array  $iptc       IPTC data.
+	 * @param array  $exif       EXIF data.
+	 */
+	return apply_filters( 'wp_read_image_metadata', $meta, $file, $image_type, $iptc, $exif );
+>>>>>>> causn
 
 }
 

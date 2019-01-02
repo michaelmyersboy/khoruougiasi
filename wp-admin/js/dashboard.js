@@ -31,6 +31,7 @@ jQuery(document).ready( function($) {
 		updateWelcomePanel( this.checked ? 1 : 0 );
 	});
 
+<<<<<<< HEAD
 	var tryGutenbergPanel = $( '#try-gutenberg-panel' ),
 		tryGutenbergPanelHide = $('#wp_try_gutenberg_panel-hide'),
 		updateTryGutenbergPanel, installGutenbergSuccess;
@@ -74,6 +75,8 @@ jQuery(document).ready( function($) {
 		wp.updates.installPlugin( args );
 	} );
 
+=======
+>>>>>>> causn
 	// These widgets are sometimes populated via ajax
 	ajaxWidgets = ['dashboard_primary'];
 

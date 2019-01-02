@@ -16,7 +16,13 @@ $submenu_file = 'edit.php';
 
 wp_reset_vars( array( 'action' ) );
 
+<<<<<<< HEAD
 if ( isset( $_GET['post'] ) )
+=======
+if ( isset( $_GET['post'] ) && isset( $_POST['post_ID'] ) && (int) $_GET['post'] !== (int) $_POST['post_ID'] )
+	wp_die( __( 'A post ID mismatch has been detected.' ), __( 'Sorry, you are not allowed to edit this item.' ), 400 );
+elseif ( isset( $_GET['post'] ) )
+>>>>>>> causn
  	$post_id = $post_ID = (int) $_GET['post'];
 elseif ( isset( $_POST['post_ID'] ) )
  	$post_id = $post_ID = (int) $_POST['post_ID'];
@@ -38,6 +44,13 @@ if ( $post ) {
 	$post_type_object = get_post_type_object( $post_type );
 }
 
+<<<<<<< HEAD
+=======
+if ( isset( $_POST['post_type'] ) && $post && $post_type !== $_POST['post_type'] ) {
+	wp_die( __( 'A post type mismatch has been detected.' ), __( 'Sorry, you are not allowed to edit this item.' ), 400 );
+}
+
+>>>>>>> causn
 if ( isset( $_POST['deletepost'] ) )
 	$action = 'delete';
 elseif ( isset($_POST['wp-preview']) && 'dopreview' == $_POST['wp-preview'] )
@@ -156,6 +169,14 @@ case 'edit':
 		break;
 	}
 
+<<<<<<< HEAD
+=======
+	if ( use_block_editor_for_post( $post ) ) {
+		include( ABSPATH . 'wp-admin/edit-form-blocks.php' );
+		break;
+	}
+
+>>>>>>> causn
 	if ( ! wp_check_post_lock( $post->ID ) ) {
 		$active_post_lock = wp_set_post_lock( $post->ID );
 
@@ -184,7 +205,11 @@ case 'editattachment':
 
 	// Update the thumbnail filename
 	$newmeta = wp_get_attachment_metadata( $post_id, true );
+<<<<<<< HEAD
 	$newmeta['thumb'] = $_POST['thumb'];
+=======
+	$newmeta['thumb'] = wp_basename( $_POST['thumb'] );
+>>>>>>> causn
 
 	wp_update_attachment_metadata( $post_id, $newmeta );
 
@@ -275,6 +300,21 @@ case 'preview':
 	wp_redirect($url);
 	exit();
 
+<<<<<<< HEAD
+=======
+case 'toggle-custom-fields':
+	check_admin_referer( 'toggle-custom-fields' );
+
+	$current_user_id = get_current_user_id();
+	if ( $current_user_id ) {
+		$enable_custom_fields = (bool) get_user_meta( $current_user_id, 'enable_custom_fields', true );
+		update_user_meta( $current_user_id, 'enable_custom_fields', ! $enable_custom_fields );
+	}
+
+	wp_safe_redirect( wp_get_referer() );
+	exit();
+
+>>>>>>> causn
 default:
 	/**
 	 * Fires for a given custom post action request.

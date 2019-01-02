@@ -34,7 +34,11 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	global $error, $interim_login, $action;
 
 	// Don't index any of these forms
+<<<<<<< HEAD
 	add_action( 'login_head', 'wp_no_robots' );
+=======
+	add_action( 'login_head', 'wp_sensitive_page_meta' );
+>>>>>>> causn
 
 	add_action( 'login_head', 'wp_login_viewport_meta' );
 
@@ -437,9 +441,12 @@ setcookie( TEST_COOKIE, 'WP Cookie check', 0, COOKIEPATH, COOKIE_DOMAIN, $secure
 if ( SITECOOKIEPATH != COOKIEPATH )
 	setcookie( TEST_COOKIE, 'WP Cookie check', 0, SITECOOKIEPATH, COOKIE_DOMAIN, $secure );
 
+<<<<<<< HEAD
 $lang            = ! empty( $_GET['wp_lang'] ) ? sanitize_text_field( $_GET['wp_lang'] ) : '';
 $switched_locale = switch_to_locale( $lang );
 
+=======
+>>>>>>> causn
 /**
  * Fires when the login form is initialized.
  *
@@ -500,10 +507,13 @@ case 'postpass' :
 	}
 	setcookie( 'wp-postpass_' . COOKIEHASH, $hasher->HashPassword( wp_unslash( $_POST['post_password'] ) ), $expire, COOKIEPATH, COOKIE_DOMAIN, $secure );
 
+<<<<<<< HEAD
 	if ( $switched_locale ) {
 	    restore_previous_locale();
 	}
 
+=======
+>>>>>>> causn
 	wp_safe_redirect( wp_get_referer() );
 	exit();
 
@@ -521,10 +531,13 @@ case 'logout' :
 		$requested_redirect_to = '';
 	}
 
+<<<<<<< HEAD
 	if ( $switched_locale ) {
 	    restore_previous_locale();
 	}
 
+=======
+>>>>>>> causn
 	/**
 	 * Filters the log out redirect URL.
 	 *
@@ -618,10 +631,13 @@ endif;
 <?php
 login_footer('user_login');
 
+<<<<<<< HEAD
 if ( $switched_locale ) {
     restore_previous_locale();
 }
 
+=======
+>>>>>>> causn
 break;
 
 case 'resetpass' :
@@ -747,10 +763,13 @@ endif;
 <?php
 login_footer('user_pass');
 
+<<<<<<< HEAD
 if ( $switched_locale ) {
     restore_previous_locale();
 }
 
+=======
+>>>>>>> causn
 break;
 
 case 'register' :
@@ -834,10 +853,13 @@ case 'register' :
 <?php
 login_footer('user_login');
 
+<<<<<<< HEAD
 if ( $switched_locale ) {
     restore_previous_locale();
 }
 
+=======
+>>>>>>> causn
 break;
 
 case 'confirmaction' :
@@ -1119,9 +1141,12 @@ try {
 <?php
 login_footer();
 
+<<<<<<< HEAD
 if ( $switched_locale ) {
     restore_previous_locale();
 }
 
+=======
+>>>>>>> causn
 break;
 } // end action switch

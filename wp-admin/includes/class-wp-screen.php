@@ -182,6 +182,17 @@ final class WP_Screen {
 	private $_screen_settings;
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Whether the screen is using the block editor.
+	 *
+	 * @since 5.0.0
+	 * @var bool
+	 */
+	public $is_block_editor = false;
+
+	/**
+>>>>>>> causn
 	 * Fetches a screen object.
 	 *
 	 * @since 3.3.0
@@ -270,7 +281,13 @@ final class WP_Screen {
 
 			switch ( $base ) {
 				case 'post' :
+<<<<<<< HEAD
 					if ( isset( $_GET['post'] ) )
+=======
+					if ( isset( $_GET['post'] ) && isset( $_POST['post_ID'] ) && (int) $_GET['post'] !== (int) $_POST['post_ID'] )
+						wp_die( __( 'A post ID mismatch has been detected.' ), __( 'Sorry, you are not allowed to edit this item.' ), 400 );
+					elseif ( isset( $_GET['post'] ) )
+>>>>>>> causn
 						$post_id = (int) $_GET['post'];
 					elseif ( isset( $_POST['post_ID'] ) )
 						$post_id = (int) $_POST['post_ID'];
@@ -400,6 +417,25 @@ final class WP_Screen {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Sets or returns whether the block editor is loading on the current screen.
+	 *
+	 * @since 5.0.0
+	 *
+	 * @param bool $set Optional. Sets whether the block editor is loading on the current screen or not.
+	 * @return bool True if the block editor is being loaded, false otherwise.
+	 */
+	public function is_block_editor( $set = null ) {
+		if ( $set !== null ) {
+			$this->is_block_editor = (bool) $set;
+		}
+
+		return $this->is_block_editor;
+	}
+
+	/**
+>>>>>>> causn
 	 * Sets the old string-based contextual help for the screen for backward compatibility.
 	 *
 	 * @since 3.3.0
@@ -1032,6 +1068,7 @@ final class WP_Screen {
 				echo _x( 'Welcome', 'Welcome panel' ) . "</label>\n";
 			}
 
+<<<<<<< HEAD
 			if ( 'dashboard' === $this->id && has_action( 'try_gutenberg_panel' ) ) {
 				if ( isset( $_GET['try_gutenberg'] ) ) {
 					$try_gutenberg_checked = empty( $_GET['try_gutenberg'] ) ? 0 : 1;
@@ -1049,6 +1086,8 @@ final class WP_Screen {
 				echo '<input type="checkbox" id="wp_try_gutenberg_panel-hide"' . checked( (bool) $try_gutenberg_checked, true, false ) . ' />';
 				echo __( 'New Editor' ) . "</label>\n";
 			}
+=======
+>>>>>>> causn
 		?>
 		</fieldset>
 		<?php

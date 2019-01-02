@@ -50,7 +50,10 @@
 
 .wp-color-result:active {
 	/* See Trac ticket #39662 */
+<<<<<<< HEAD
 	-webkit-transform: none !important;
+=======
+>>>>>>> causn
 	transform: none !important;
 }
 
