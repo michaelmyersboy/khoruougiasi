@@ -1,0 +1,12 @@
+2019-01-03T14:56:11+00:00 CRITICAL Uncaught Error: Call to undefined function have_rows() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\front-page.php:4
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\front-page.php on line 4
+
+2019-01-03T15:28:53+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-admin\includes\class-wp-screen.php on line 15
+
+2019-01-03T15:42:45+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-admin\includes\class-wp-filesystem-direct.php on line 76
+
