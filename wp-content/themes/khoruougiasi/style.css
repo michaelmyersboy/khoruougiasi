@@ -1,0 +1,66 @@
+/*
+Theme Name: Khoruougiasi
+Theme URI: https://namthienweb.com
+Author: namthien team
+Author URI: https://namthienweb.com
+Description: Samples are created for sales purposes. Demo is selling alcohol
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: khoruougiasi
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+*/
+
+div#wpadminbar {
+    display: none;
+}
+.no_show_view_cart a.added_to_cart.wc-forward {
+    display: none;
+    background: #444;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+}
+.cart .dropdown-menu p span {
+    color: #dc4c46;
+}
+.cart .dropdown-menu li b {
+    color: #ccc;
+}
+.cart ul li p a {
+    background: #eee;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    float: right;
+    border-radius: 2px;
+}
+.grid-table .grid-item img {
+    margin-top: 15px;
+    height: 70px;
+    width: auto;
+}
+.woocommerce a.remove i {
+    font-size: 15px;
+}
+.woocommerce .grid-item a.remove{
+    color: #333 !important;
+}
+.woocommerce .grid-item a.remove:hover {
+     color: red !important;
+     background: #fff;
+}
+.cart-page-title span {
+    font-size: 25px;
+    font-family: 'Marcellus', serif;
+}
+.cart-page-title strong {
+    margin-left: 5px;
+}
+ul.cart-page-ul span.woocommerce-Price-amount {
+    font-size: 16px;
+    line-height: 1.5em;
+}
