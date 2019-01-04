@@ -8,7 +8,7 @@
     <link rel="icon" href="<?php echo get_template_directory_uri() . "/favicon.ico";?> ">
     <?php wp_head() ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <div class="menu-rs">
     <div class="menu-wrap">
         <div class="r-mv">

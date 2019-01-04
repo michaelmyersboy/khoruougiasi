@@ -113,3 +113,6 @@ ul.cart-page-ul span.woocommerce-Price-amount {
 .product_details .added_to_cart.wc-forward{
   display: none;
 }
+body.single-product #sidebar{
+  display: none;
+}
