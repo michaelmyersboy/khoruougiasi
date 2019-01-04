@@ -67,32 +67,11 @@ do_action( 'woocommerce_before_main_content' );
 								</ul>
 								<?php }	?>
 					</div>
-					<div class="box">
+					<div class="box widget_product_list">
 						<h3 class="title line-default">Search</h3>
-						<form id="wc_form">
-							<select class="form-item" name="price">
-								<option>Price</option>
-								<option>$20 - $100</option>
-								<option>100 - $500</option>
-								<option>$500- $5000</option>
-								<option>&gt; $5000</option>
-							</select>
-							<select class="form-item" name="year">
-								<option>Year</option>
-								<option>1998</option>
-								<option>2000</option>
-								<option>2007</option>
-								<option>2017</option>
-							</select>
-							<select class="form-item" name="wine_size">
-								<option>Wine Size</option>
-								<option>100 ml</option>
-								<option>200 ml</option>
-								<option>300 ml</option>
-								<option>400 ml</option>
-							</select>
-							<button type="submit" class="ht-btn bg-dc4c46">Search</button>
-						</form>
+						<ul class="list list-border">
+							<?php dynamic_sidebar('widget_product_list')  ?>
+						</ul>
 						<script type="text/javascript">
 									var frm = $('#wc_form');
 									frm.submit(function (e) {
@@ -137,7 +116,7 @@ do_action( 'woocommerce_before_main_content' );
 												wc_get_template_part( 'content', 'productList' );
 											}
 									}
-									woocommerce_product_loop_end();									
+									woocommerce_product_loop_end();
 									do_action( 'woocommerce_after_shop_loop' );
 						?>
 					</div>

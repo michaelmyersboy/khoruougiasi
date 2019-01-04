@@ -56,7 +56,7 @@ require get_parent_theme_file_path( '/inc/Theme_Header_Menu_Walker.php' );
 //customer Widget
 function widgetsInit() {
     register_sidebar( array(
-        'name'          => 'footer',
+        'name'          => 'Footer',
         'id'            => 'widget_footer',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
@@ -64,8 +64,8 @@ function widgetsInit() {
         'after_title'   => '</h2>'
     ) );
     register_sidebar( array(
-        'name'          => 'cart',
-        'id'            => 'widget_cart',
+        'name'          => 'Left SlideBar Category Product',
+        'id'            => 'widget_product_list',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
@@ -80,4 +80,3 @@ add_action( 'widgets_init', function(){
 require get_parent_theme_file_path( '/inc/Footer_Html_Widget.php' );
 //woocommerce
 require get_parent_theme_file_path( '/inc/Woocommerce_Custom.php' );
-
