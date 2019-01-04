@@ -6,3 +6,60 @@
 
 2019-01-04T10:44:15+00:00 CRITICAL Maximum execution time of 300 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-productList.php on line 19
 
+2019-01-04T15:27:47+00:00 CRITICAL Uncaught Error: Call to undefined function get_regular_price() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php:56
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(178): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 56
+
+2019-01-04T15:27:58+00:00 CRITICAL Uncaught Error: Call to a member function get_regular_price() on null in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php:56
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(178): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 56
+
+2019-01-04T15:28:43+00:00 CRITICAL Uncaught Error: Call to a member function get_regular_price() on bool in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php:57
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(178): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 57
+
+2019-01-04T15:35:22+00:00 CRITICAL Uncaught Error: Call to a member function get_price() on string in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php:57
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(178): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 57
+
+2019-01-04T15:39:58+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Variable as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php:59
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(178): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\templates\single-product.php(37): wc_get_template_part('content', 'single-product')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 59
+
+2019-01-04T16:50:04+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-single-product.php on line 111
+

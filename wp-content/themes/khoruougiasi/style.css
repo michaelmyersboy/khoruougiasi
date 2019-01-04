@@ -102,3 +102,14 @@ ul.cart-page-ul span.woocommerce-Price-amount {
 .iconc{
   cursor: pointer;
 }
+.img-lager img {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+.list-border li p {
+    display: inline-block;
+}
+.product_details .added_to_cart.wc-forward{
+  display: none;
+}

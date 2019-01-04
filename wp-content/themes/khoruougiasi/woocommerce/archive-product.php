@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_main_content' );
 			<div class="title-group underline-double">
 				<h5 class="sub-title">ROYAL WINE</h5>
 				<h2 class="selected">OUR PRODUCTS</h2>
-				<?php  //var_dump(get_field_objects())  ?>
+				<?php   ?>
 				<?php if(get_field('minium_title')):?>
 					<h5 class="sub-title"><?php echo get_field('minium_title'); ?></h5>
 			  <?php endif; ?>
@@ -128,7 +128,7 @@ do_action( 'woocommerce_before_main_content' );
 	</div>
 </section>
 <script type="text/javascript">
-	function showLayout(current,layou1Id,layout2Id){
+	function showLayout(current){
 		if(current === '1'){
 			$("#layout2").addClass('hidden');
 			$("#layout1").removeClass('hidden');
