@@ -72,33 +72,14 @@ do_action( 'woocommerce_before_main_content' );
 						<ul class="list list-border">
 							<?php dynamic_sidebar('widget_product_list')  ?>
 						</ul>
-						<script type="text/javascript">
-									var frm = $('#wc_form');
-									frm.submit(function (e) {
-											e.preventDefault();
-											$.ajax({
-													type: frm.attr('method'),
-													url: frm.attr('action'),
-													data: frm.serialize(),
-													success: function (data) {
-															console.log('Submission was successful.');
-															console.log(data);
-													},
-													error: function (data) {
-															console.log('An error occurred.');
-															console.log(data);
-													},
-											});
-									});
-						</script>
 					</div>
 				</div>
 				<?php if ( woocommerce_product_loop() )	{ ?>
 				<div class="col-sm-8 col-md-9">
 					<div class="row">
 						<div class="col-xs-6 col-sm-4">
-							<div class="iconc"><i class="fa fa-th"></i></div>
-							<div class="iconc"><i class="fa fa-list"></i></div>
+							<div class="iconc" onclick="showLayout('1')"><i class="fa fa-th"></i></div>
+							<div class="iconc" onclick="showLayout('2')"><i class="fa fa-list"></i></div>
 						</div>
 						<div class="col-xs-6 col-sm-4 pull-right">
 							<?php do_action( 'woocommerce_before_shop_loop' ); ?>
@@ -108,13 +89,24 @@ do_action( 'woocommerce_before_main_content' );
 						<?php
 									woocommerce_product_loop_start();
 									if ( wc_get_loop_prop( 'total' ) )
-									{
-											while ( have_posts() )
+									{?>
+										<div id="layout1">
+									<?php	while ( have_posts() )
 											{
 												the_post();
 												do_action( 'woocommerce_shop_loop' );
 												wc_get_template_part( 'content', 'productList' );
-											}
+											}?>
+										</div>
+										<div id="layout2" class="hidden">
+									<?php	while ( have_posts() )
+											{
+												the_post();
+												do_action( 'woocommerce_shop_loop' );
+												wc_get_template_part( 'content', 'product' );
+											}?>
+										</div>
+									<?php
 									}
 									woocommerce_product_loop_end();
 									do_action( 'woocommerce_after_shop_loop' );
@@ -132,6 +124,18 @@ do_action( 'woocommerce_before_main_content' );
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+	function showLayout(current,layou1Id,layout2Id){
+		if(current === '1'){
+			$("#layout2").addClass('hidden');
+			$("#layout1").removeClass('hidden');
+		}
+		if(current === '2'){		
+			$("#layout2").removeClass('hidden');
+			$("#layout1").addClass('hidden');
+		}
+	}
+</script>
 <?php
 do_action( 'woocommerce_after_main_content' );
 get_footer( 'shop' );

@@ -80,3 +80,10 @@ add_action( 'widgets_init', function(){
 require get_parent_theme_file_path( '/inc/Footer_Html_Widget.php' );
 //woocommerce
 require get_parent_theme_file_path( '/inc/Woocommerce_Custom.php' );
+include get_template_directory() . '/inc/class-wc-widget-price-custom-filter.php';
+
+add_action("widgets_init", "load_custom_widgets");
+function load_custom_widgets() {
+unregister_widget("WC_Widget_Price_Filter");
+register_widget("WC_Widget_Price_Custom_Filter");
+}
