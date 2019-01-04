@@ -9,7 +9,8 @@
                     <div class="testimonial-item">
                         <p class="line-default line-default-f testimonial-txt"><i class="fa fa-quote-left m-r-5"></i><?php echo get_sub_field('Desciption')?></p>
                         <p class="line"></p>
-                        <p><strong></strong><?php echo get_sub_field('author_name')?></strong></p>
+                        <?php $user= get_sub_field('author'); ?>
+                        <p><strong></strong><?php echo $user['display_name']; ?></strong></p>
                     </div>
                     <?php endwhile; ?>
                 </div>

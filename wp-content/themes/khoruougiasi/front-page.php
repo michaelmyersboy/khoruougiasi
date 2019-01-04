@@ -1,8 +1,6 @@
 <?php get_header()?>
 <div class="main-content front-page">
-    <?php    
-    $fields = get_field_objects();
-    var_dump( $fields );
+    <?php 
     if( have_rows('layout_default') ):
              while ( have_rows('layout_default') ) : the_row();
                 if( get_row_layout() == 'section_1' ){
