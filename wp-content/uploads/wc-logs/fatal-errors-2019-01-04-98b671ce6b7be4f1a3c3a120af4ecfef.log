@@ -1,0 +1,8 @@
+2019-01-04T10:42:09+00:00 CRITICAL Maximum execution time of 300 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-productList.php on line 19
+
+2019-01-04T10:42:14+00:00 CRITICAL Maximum execution time of 300 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-product.php on line 19
+
+2019-01-04T10:42:17+00:00 CRITICAL Maximum execution time of 300 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php on line 640
+
+2019-01-04T10:44:15+00:00 CRITICAL Maximum execution time of 300 seconds exceeded in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\content-productList.php on line 19
+

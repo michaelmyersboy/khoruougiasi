@@ -57,6 +57,8 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
     return $fragments;
 }
 remove_action('woocommerce_cart_collaterals','woocommerce_cross_sell_display');
+remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
+
 function woocommerce_button_proceed_to_checkout() {
     $checkout_url = WC()->cart->get_checkout_url(); ?>
     <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button alt wc-forward ht-btn bg-dc4c46">Check Out
