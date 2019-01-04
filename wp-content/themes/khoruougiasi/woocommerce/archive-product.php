@@ -33,6 +33,9 @@ do_action( 'woocommerce_before_main_content' );
 	<div class="container">
 		<div class="content">
 			<div class="title-group underline-double">
+				<h5 class="sub-title">ROYAL WINE</h5>
+				<h2 class="selected">OUR PRODUCTS</h2>
+				<?php  //var_dump(get_field_objects())  ?>
 				<?php if(get_field('minium_title')):?>
 					<h5 class="sub-title"><?php echo get_field('minium_title'); ?></h5>
 			  <?php endif; ?>
@@ -95,7 +98,7 @@ do_action( 'woocommerce_before_main_content' );
 											{
 												the_post();
 												do_action( 'woocommerce_shop_loop' );
-												wc_get_template_part( 'content', 'productList' );
+												wc_get_template_part( 'content', 'product1' );
 											}?>
 										</div>
 										<div id="layout2" class="hidden">
@@ -103,7 +106,7 @@ do_action( 'woocommerce_before_main_content' );
 											{
 												the_post();
 												do_action( 'woocommerce_shop_loop' );
-												wc_get_template_part( 'content', 'product' );
+												wc_get_template_part( 'content', 'product2' );
 											}?>
 										</div>
 									<?php
@@ -130,7 +133,7 @@ do_action( 'woocommerce_before_main_content' );
 			$("#layout2").addClass('hidden');
 			$("#layout1").removeClass('hidden');
 		}
-		if(current === '2'){		
+		if(current === '2'){
 			$("#layout2").removeClass('hidden');
 			$("#layout1").addClass('hidden');
 		}
