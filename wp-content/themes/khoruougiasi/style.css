@@ -122,3 +122,6 @@ body.single-product #sidebar{
     border: 1px solid #eee;
     min-width: 40px;
 }
+.page-template-page-contact input.wpcf7-submit {
+    border: none;
+}
