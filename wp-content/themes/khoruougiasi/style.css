@@ -10,10 +10,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: khoruougiasi
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
 */
-
-div#wpadminbar {
-    display: none;
-}
 .no_show_view_cart a.added_to_cart.wc-forward {
     display: none;
     background: #444;
@@ -115,4 +111,14 @@ ul.cart-page-ul span.woocommerce-Price-amount {
 }
 body.single-product #sidebar{
   display: none;
+}
+.category-content .box-item img {
+    /* width: 100%; */
+    height: auto;
+}
+.ht-pagination li span {
+    margin-right: 5px;
+    padding: 8px 10px;
+    border: 1px solid #eee;
+    min-width: 40px;
 }

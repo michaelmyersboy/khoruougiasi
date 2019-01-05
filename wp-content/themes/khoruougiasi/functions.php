@@ -87,3 +87,22 @@ function load_custom_widgets() {
 unregister_widget("WC_Widget_Price_Filter");
 register_widget("WC_Widget_Price_Custom_Filter");
 }
+//post settings
+/*add_filter( 'get_archives_link', function( $link_html, $url, $text, $format, $before, $after ) {
+
+    if ( 'custom' == $format ) {
+        $link_html = "\t<li value=\"". esc_attr( $text ) ."\" data-filter-value=\".classof". esc_attr( $text ) ."\">$before<a href='$url'>$text</a>$after</li>\n";
+    }
+
+    return $output;
+
+}, 10, 6 );*/
+add_filter ('get_archives_link',
+function ($link_html, $url, $text, $format, $before, $after) {
+
+  $link_html = "<li><a href='$url'>"
+             . "$text"
+             . '</a><span class="pull-right color-8 f-normal">42</span></li>';
+
+    return $link_html;
+}, 10, 6);
