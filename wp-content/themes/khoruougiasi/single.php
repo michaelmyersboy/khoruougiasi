@@ -88,12 +88,7 @@ while ( have_posts() ) : the_post();
 						comment_form($comment_args);
 						 ?>
 						 <?php
-							 $args = array(
-							 	'status' => 'hold',
-							 	'number' => '5',
-							 	'post_id' => get_the_id(),
-							 );
-							 $comments = get_comments($args);
+						 	$comments = get_approved_comments(get_the_id());
 							if(count($comments) > 0):?>
 							<ul class="list list-border">
 							 <?php foreach($comments as $comment) : ?>
@@ -103,85 +98,95 @@ while ( have_posts() ) : the_post();
 								</li>
 							 <?php endforeach; ?>
 							</ul>
-						<?php endif; ?>							
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="box">
 						<h3 class="title line-default">Categories</h3>
-						<ul class="list list-border">
-							<li><a href="#">Event</a></li>
-							<li><a href="#">Wedding</a></li>
-							<li>Brithdaysr</li>
-							<li><a href="#">Food</a></li>
-							<li><a href="#">Drink</a></li>
-						</ul>
+						<?php
+								$orderby = 'name';
+								$order = 'asc';
+								$hide_empty = false ;
+								$cat_args = array(
+									'orderby'    => $orderby,
+									'order'      => $order,
+									'hide_empty' => $hide_empty,
+								);
+								$product_categories = get_terms( 'category', $cat_args );
+								if( !empty($product_categories) ){ ?>
+								<ul class="list list-border">
+									<?php foreach ($product_categories as $key => $category) :	?>
+											<li><a href="<?php echo get_term_link($category);?>"><?php echo  $category->name; ?></a></li>
+									<?php endforeach;	?>
+								</ul>
+								<?php }	?>
 					</div>
 					<div class="box">
 						<h3 class="title line-default">Archives</h3>
+						<?php
+						$args = array(
+									 'type'            => 'monthly',
+									 'limit'           => '',
+									 'format'          => 'html',
+									 'before'          => '',
+									 'after'           => '',
+									 'show_post_count' => false,
+									 'echo'            => 1,
+									 'order'           => 'DESC',
+										'post_type'     => 'post'
+									);
+
+						?>
 						<ul class="list list-border">
-							<li><a href="#">January 2016</a><span class="pull-right color-8 f-normal">42</span></li>
-							<li><a href="#">November 2016</a><span class="pull-right color-8 f-normal">152</span></li>
-							<li><a href="#">September 2016</a><span class="pull-right color-8 f-normal">82</span></li>
-							<li><a href="#">May 2017</a><span class="pull-right color-8 f-normal">322</span></li>
-							<li><a href="#">July 2017</a><span class="pull-right color-8 f-normal">72</span></li>
+							<?php echo 	wp_get_archives($args);?>
 						</ul>
 					</div>
 					<div class="box">
 						<h3 class="title line-default">Recent Post</h3>
-						<div class="media">
-							<div class="media-left">
-								<a href="#"><img class="media-object m-r-5" src="../images/alcohol-2101_960_720.jpg" width="100" alt="image"></a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading p-0 f-16"><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-								<span class="color-9 f-14">January 23 2017</span>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<a href="#"><img class="media-object m-r-5" src="../images/bar-1869656_1920.jpg" width="100" alt="image"></a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading p-0 f-16"><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-								<span class="color-9 f-14">November 06 2017</span>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<a href="#"><img class="media-object m-r-5" src="../images/bottle-791699_960_720.jpg" width="100" alt="image"></a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading p-0 f-16"><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-								<span class="color-9 f-14">Febnuary 10 2017</span>
-							</div>
-						</div>
-						<div class="media">
-							<div class="media-left">
-								<a href="#"><img class="media-object m-r-5" src="../images/breakfast-801827_960_720.jpg" width="100" alt="image"></a>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading p-0 f-16"><a href="#">Lorem ipsum dolor sit amet consectetur</a></h4>
-								<span class="color-9 f-14">September 11 2017</span>
-							</div>
-						</div>
+						<?php
+						$category=get_the_category(get_the_id());
+						$args = array(
+								'numberposts' => 4,
+								'offset' => 0,
+								'category' => $category[0]->term_id,
+								'orderby' => 'post_date',
+								'order' => 'DESC',
+								'include' => '',
+								'exclude' => '',
+								'meta_key' => '',
+								'meta_value' =>'',
+								'post_type' => 'post',
+								'post_status' => 'draft, publish, future, pending, private',
+								'suppress_filters' => true
+								);
+								$recent_posts = wp_get_recent_posts( $args, ARRAY_A );
+								if(count($recent_posts) > 0):
+						?>
+						    <?php foreach ($recent_posts as  $rp) : ?>
+									<div class="media">
+										<div class="media-left">
+											<a href="<?php echo get_permalink($rp['ID'])?>">
+												 <img class="media-object m-r-5" src="<?php echo get_the_post_thumbnail_url($rp['ID'], 'thumbnail'); ?>" width="100" alt="image">
+											 </a>
+										</div>
+										<div class="media-body">
+											<h4 class="media-heading p-0 f-16"><a href="<?php echo get_permalink($rp['ID'])?>"><?php echo substr($rp['post_excerpt'],0,38).' ...'; ?></a></h4>
+											<span class="color-9 f-14"><?php echo get_the_date('',$rp['ID'])?></span>
+										</div>
+									</div>
+						    <?php endforeach; ?>
+					   <?php endif;?>
 					</div>
 					<div class="box">
 						<h3 class="title line-default">Popular tags</h3>
+						<?php
+						$tags = get_tags();
+						?>
 						<ul class="tags">
-							<li><a href="#">restaurent</a></li>
-							<li><a href="#">dinner</a></li>
-							<li><a href="#">luch</a></li>
-							<li><a href="#">sea food</a></li>
-							<li><a href="#">cake</a></li>
-							<li><a href="#">meat</a></li>
-							<li><a href="#">food</a></li>
-							<li><a href="#">bar</a></li>
-							<li><a href="#">main course</a></li>
-							<li><a href="#">salad</a></li>
-							<li><a href="#">soul</a></li>
-							<li><a href="#">wine</a></li>
-							<li><a href="#">dessert</a></li>
+							<?php foreach ($tags as $tag):?>
+								<li><a href="<?php echo get_tag_link($tag->term_id);?>"><?php echo $tag->name; ?></a></li>
+							<?php endforeach; ?>
 						</ul>
 					</div>
 				</div>
