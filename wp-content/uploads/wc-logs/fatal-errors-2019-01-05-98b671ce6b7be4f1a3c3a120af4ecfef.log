@@ -114,3 +114,13 @@ Stack trace:
 
 2019-01-05T05:19:27+00:00 CRITICAL syntax error, unexpected '=' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 51
 
+2019-01-05T07:45:52+00:00 CRITICAL syntax error, unexpected 'author' (T_STRING) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 76
+
+2019-01-05T07:48:34+00:00 CRITICAL syntax error, unexpected 'email' (T_STRING) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 83
+
+2019-01-05T07:51:06+00:00 CRITICAL syntax error, unexpected 'comment' (T_STRING), expecting ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 84
+
+2019-01-05T07:52:10+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 81
+
+2019-01-05T08:28:58+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 95
+

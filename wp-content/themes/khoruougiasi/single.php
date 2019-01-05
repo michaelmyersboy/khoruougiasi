@@ -56,7 +56,7 @@ while ( have_posts() ) : the_post();
 								</p>
 							</div>
 							<div class="col-sm-6">
-								<ul class="list list-inline m-t-5 text-right">								
+								<ul class="list list-inline m-t-5 text-right">
 									<li><a href="https://www.facebook.com/"><i class="fa fa-facebook icon icon-25"></i></a></li>
 									<li><a href="https://plus.google.com/?hl=vi"><i class="fa fa-google icon icon-25"></i></a></li>
 									<li><a href="https://twitter.com/?lang=vi"><i class="fa fa-twitter icon icon-25"></i></a></li>
@@ -66,17 +66,44 @@ while ( have_posts() ) : the_post();
 						</div>
 					</div>
 					<div class="m-t-20">
-						<h4 class="title m-t-40 m-b-0">Leave a comment</h4>
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-item" placeholder="Name">
-								<input type="text" class="form-item" placeholder="Email">
-								<input type="text" class="form-item" placeholder="Phone">
-								<textarea class="form-item" placeholder="Comment"></textarea>
-							</div>
-							<div class="form-group"></div>
-							<button type="submit" class="ht-btn bg-dc4c46">Post comment</button>
-						</form>
+						<?php
+						$comment_args = array(
+							'class_form'=>'form-group',
+							'title_reply_before'=>'<h4 class="title m-t-40 m-b-0">',
+							'title_reply_after'=>'</h4>',
+						  'title_reply'=>'Leave a comment',
+							'fields' => apply_filters( 'comment_form_default_fields',
+									array(
+										'author' => '<input name="author" type="text" class="form-item" placeholder="Name" value="' . esc_attr( $commenter['comment_author'] ).'"' . $aria_req . $html_req . ' />',
+										'email'  => '<input name="email" type="text" class="form-item" placeholder="Email" value="' . esc_attr(  $commenter['comment_author_email'] ) .'"'. $aria_req . $html_req  . ' />',
+										'comment_notes_after' => '',
+									)
+					 		 ),
+							 'comment_field' => '<textarea  name="comment" class="form-item" placeholder="Comment" aria-required="true" required="required"></textarea>',
+							 'class_submit'=>'ht-btn bg-dc4c46',
+							 'comment_notes_before'=>'',
+							 'comment_notes_after'=>''
+						);
+
+						comment_form($comment_args);
+						 ?>
+						 <?php
+							 $args = array(
+							 	'status' => 'hold',
+							 	'number' => '5',
+							 	'post_id' => get_the_id(),
+							 );
+							 $comments = get_comments($args);
+							if(count($comments) > 0):?>
+							<ul class="list list-border">
+							 <?php foreach($comments as $comment) : ?>
+								<li>
+										<b><?php echo $comment->comment_author; ?></b></br>
+										<?php echo $comment->comment_content;?>
+								</li>
+							 <?php endforeach; ?>
+							</ul>
+						<?php endif; ?>							
 					</div>
 				</div>
 				<div class="col-sm-4">

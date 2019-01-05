@@ -87,16 +87,6 @@ function load_custom_widgets() {
 unregister_widget("WC_Widget_Price_Filter");
 register_widget("WC_Widget_Price_Custom_Filter");
 }
-//post settings
-/*add_filter( 'get_archives_link', function( $link_html, $url, $text, $format, $before, $after ) {
-
-    if ( 'custom' == $format ) {
-        $link_html = "\t<li value=\"". esc_attr( $text ) ."\" data-filter-value=\".classof". esc_attr( $text ) ."\">$before<a href='$url'>$text</a>$after</li>\n";
-    }
-
-    return $output;
-
-}, 10, 6 );*/
 add_filter ('get_archives_link',
 function ($link_html, $url, $text, $format, $before, $after) {
 
@@ -106,3 +96,11 @@ function ($link_html, $url, $text, $format, $before, $after) {
 
     return $link_html;
 }, 10, 6);
+function wpb_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
