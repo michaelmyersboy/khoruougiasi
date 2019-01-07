@@ -36,14 +36,29 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     <div class="col-sm-8">
       <div class="caption text-left p-0">
         <h3 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <p class="line-mix price"><?php echo wc_price($product->get_price()); ?></p>
+        <p class="price"><?php echo wc_price($product->get_price()); ?></p>
         <p><?php echo substr(get_the_excerpt(),0,38).' ...'; ?></p>
         <div class="rating">
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star active"></i>
-          <i class="fa fa-star"></i>
+            <?php
+            $rating_count = $product->get_rating_count();
+            $rating_not_active= 5-$rating_count;
+            if($rating_not_active == 5){
+                echo '<i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>';
+            }
+            else {
+                for ($i=1;$i<=$rating_count;$i++){
+                    echo '<i class="fa fa-star active"></i>';
+                }
+                for ($i=1;$i<=$rating_not_active;$i++){
+                    echo '<i class="fa fa-star"></i>';
+                }
+
+            }
+            ?>
         </div>
         <div class="no_show_view_cart">
             <a rel="nofollow" href="/?add-to-cart==<?php echo get_the_id(); ?>" class="button product_type_simple add_to_cart_button ajax_add_to_cart ht-btn"

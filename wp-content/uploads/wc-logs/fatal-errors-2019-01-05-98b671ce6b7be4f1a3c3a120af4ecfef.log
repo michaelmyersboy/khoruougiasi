@@ -124,3 +124,29 @@ Stack trace:
 
 2019-01-05T08:28:58+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 95
 
+2019-01-05T18:04:37+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php on line 42
+
+2019-01-05T18:06:12+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php on line 113
+
+2019-01-05T18:23:41+00:00 CRITICAL Uncaught Error: Call to undefined function get_url_site() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php:36
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1911): wc_get_template('cart/cart-total...')
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_cart_totals('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php(144): do_action('woocommerce_car...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\git\kh in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php on line 36
+
+2019-01-05T18:23:55+00:00 CRITICAL Uncaught Error: Call to undefined function get_url_site() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php:36
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1911): wc_get_template('cart/cart-total...')
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_cart_totals('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php(144): do_action('woocommerce_car...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\git\kh in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php on line 36
+

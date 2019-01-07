@@ -87,12 +87,15 @@ function load_custom_widgets() {
 unregister_widget("WC_Widget_Price_Filter");
 register_widget("WC_Widget_Price_Custom_Filter");
 }
+//post setting
 add_filter ('get_archives_link',
 function ($link_html, $url, $text, $format, $before, $after) {
-
+  $after = str_replace("&nbsp;", "", $after);
+  $after = str_replace(")", "", $after);
+  $after = str_replace("(", "", $after);
   $link_html = "<li><a href='$url'>"
              . "$text"
-             . '</a><span class="pull-right color-8 f-normal">42</span></li>';
+             . '</a><span class="pull-right color-8 f-normal">'.$after.'</span></li>';
 
     return $link_html;
 }, 10, 6);

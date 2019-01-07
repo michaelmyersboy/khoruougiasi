@@ -10,7 +10,7 @@ Email: template3x@gmail.com
 ------------------------
 NOTE:
 PLEASE DO NOT EDIT THIS CSS, IF YOU NEED USE "CUSTOM.CSS" FILE FOR WRITING YOUR CUSTOM CSS.
-I WILL RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE IT'S BETTER USE "CUSTOM.CSS".	
+I WILL RELEASE FUTURE UPDATES SO IT WILL OVERWRITE THIS FILE IT'S BETTER USE "CUSTOM.CSS".
 
 Content of tables
 	01. reset
@@ -531,7 +531,7 @@ textarea.form-item{
 	text-transform:uppercase;
 	font-family: 'Cinzel', serif;
 	letter-spacing:5px;
-	color:#eac47d;	
+	color:#eac47d;
 }
 .star-group i{
 	font-size:16px;
@@ -601,11 +601,11 @@ textarea.form-item{
 .line-mix{
 	position:relative;
 	display:inline-block;
-	margin-bottom:15px;	
+	margin-bottom:15px;
 }
 .line-mix::before,.line-mix::after{
 	position:absolute;
-	top:45%;
+	top:50%;
 	content:'';
 	width:50px;
 	border-bottom:1px solid #333;
@@ -706,7 +706,7 @@ textarea.form-item{
 h4.panel-title{
 	padding:10px;
 	position:relative;
-	font-family: 'Roboto', sans-serif; 
+	font-family: 'Roboto', sans-serif;
 	font-weight:500;
 }
 h4.panel-title a::after{
@@ -851,7 +851,7 @@ h4.panel-title a.collapsed::after{
 .list-comment h4,.form-comment h4{
 	margin-bottom:5px;
 	font-size:25px;
-} 
+}
 .list-comment .comment-item .comment-img{
 	width:80px;
 	height:80px;
@@ -1225,18 +1225,18 @@ section .ht-tabs ul li a,.ht-tabs ul li.active a{
 @-moz-keyframes spin {
 	100% {
 		-moz-transform: rotate(360deg);
-	} 
+	}
 }
 @-webkit-keyframes spin {
 	100% {
-		-webkit-transform: rotate(360deg); 
-	} 
+		-webkit-transform: rotate(360deg);
+	}
 }
 @keyframes spin {
 	100% {
 		-webkit-transform: rotate(360deg);
-		transform:rotate(360deg); 
-	} 
+		transform:rotate(360deg);
+	}
 }
 /*29. Grid table--*/
 .grid-table{

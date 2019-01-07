@@ -1,0 +1,4 @@
+2019-01-07T03:07:55+00:00 CRITICAL syntax error, unexpected 'return' (T_RETURN) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\inc\Woocommerce_Custom.php on line 296
+
+2019-01-07T03:18:04+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\search.php on line 50
+

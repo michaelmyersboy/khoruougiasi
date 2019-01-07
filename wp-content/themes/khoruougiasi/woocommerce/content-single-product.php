@@ -65,8 +65,9 @@ if ( post_password_required() ) {
 							echo wc_display_product_attributes($product);
 						?>
 						<li><b class="d-inline-block w-100">Quantity:</b><input type="text" class="form-item w-120" id="quantity" value="1" pattern= "[1-9]"></li>
+						<?php //do_action( 'woocommerce_single_product_summary' ); ?>
 					</ul>
-					<a rel="nofollow" href="/?add-to-cart=<?php echo get_the_id(); ?>" class="button product_type_simple add_to_cart_button ajax_add_to_cart ht-btn bg-dc4c46"
+					<a rel="nofollow" href="/?add-to-cart=<?php echo get_the_id(); ?>" class="product_type_simple add_to_cart_button ajax_add_to_cart ht-btn bg-dc4c46"
 						 data-product_id="<?php echo get_the_id(); ?>" id="addToCart">Add to Cart</a>
 						 <script type="text/javascript">
 						 (function($){
@@ -77,16 +78,14 @@ if ( post_password_required() ) {
 									 		$('#addToCart').attr('href',"/?add-to-cart=<?php echo get_the_id(); ?>&quantity="+this.value);
 								 		}
 								 });
+								 $("#submit").addClass("ht-btn");
 							 });
 						 })(jQuery);
 						 </script>
 				</div>
 			</div>
 		</div>
-		<div class="m-t-30">
-			<h3 class="line-default">DESCTIPTION</h3>
-			<div class="box p-30"><div><?php echo get_post_field('post_content', get_the_id()); ?></div>
-		</div>
+		<?php do_action( 'woocommerce_after_single_product_summary' ); ?>
 		<div class="m-t-60">
 			<div class="title-group">
 				<h5 class="sub-title">Royal wine</h5>
@@ -102,13 +101,11 @@ if ( post_password_required() ) {
 					if( ! is_a( $product, 'WC_Product' ) ){
 				    $product = wc_get_product(get_the_id());
 					}
-
 					woocommerce_related_products( array(
 					    'posts_per_page' => 4,
 					    'columns'        => 4,
 					    'orderby'        => 'rand'
 					) ) ;
-
 				?>
 			</div>
 		</div>

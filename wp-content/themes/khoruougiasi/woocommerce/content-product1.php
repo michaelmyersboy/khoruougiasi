@@ -36,7 +36,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
       <p class="line-mix price"><?php echo wc_price($product->get_price()); ?></p>
       <p><?php echo substr(get_the_excerpt(),0,38).' ...'; ?></p>
       <div class="no_show_view_cart">
-          <a rel="nofollow" href="/?add-to-cart==<?php echo get_the_id(); ?>" class="button product_type_simple add_to_cart_button ajax_add_to_cart ht-btn"
+          <a rel="nofollow" href="/?add-to-cart==<?php echo get_the_id(); ?>" class="product_type_simple add_to_cart_button ajax_add_to_cart ht-btn"
              data-product_id="<?php echo get_the_id(); ?>">Add to Cart</a>
       </div>
       <br>
