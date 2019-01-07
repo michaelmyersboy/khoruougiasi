@@ -4,7 +4,7 @@
 
 function addScriptsToHead()
 {
-    wp_enqueue_script( 'jqueryJs',get_template_directory_uri() . "/js/jquery-2.2.4.min.js", array ( 'jquery' ), 1.1, true);
+
     wp_enqueue_style('jquery', get_template_directory_uri() . "/css/jquery-ui.css", array(), '1.1', 'all');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . "/css/bootstrap.min.css", array(), '1.1', 'all');
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . "/css/owl.carousel.css", array(), '1.1', 'all');
@@ -16,6 +16,7 @@ function addScriptsToHead()
     wp_enqueue_style('css', get_template_directory_uri() . "/css/css.css", array(), '1.1', 'all');
     wp_enqueue_style('style1', get_template_directory_uri() . "/css/style.css", array(), '1.1', 'all');
     wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_script( 'jqueryJs',get_template_directory_uri() . "/js/jquery-2.2.4.min.js", array ( 'jquery' ), 1.1, true);
 }
 add_action('wp_head', 'addScriptsToHead');
 //add script to footer

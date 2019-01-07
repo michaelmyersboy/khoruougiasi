@@ -22,25 +22,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<table class="shop_attributes">
+<?php if ( is_product() ): ?>
+
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
-		<tr>
-			<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
-			<td class="product_weight"><?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></td>
-		</tr>
+		<li class="2">
+			<b><?php _e( 'Weight', 'woocommerce' ) ?></b>
+			<?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?>
+		</li>
 	<?php endif; ?>
 
 	<?php if ( $display_dimensions && $product->has_dimensions() ) : ?>
-		<tr>
-			<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
-			<td class="product_dimensions"><?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></td>
-		</tr>
+		<li class="1">
+			<b><?php _e( 'Dimensions', 'woocommerce' ) ?></b>
+		<?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?>
+		</li>
 	<?php endif; ?>
 
 	<?php foreach ( $attributes as $attribute ) : ?>
-		<tr>
-			<th><?php echo wc_attribute_label( $attribute->get_name() ); ?></th>
-			<td><?php
+		<li><b class="d-inline-block w-100"><?php echo wc_attribute_label( $attribute->get_name() ); ?>:</b>
+		<?php
 				$values = array();
 
 				if ( $attribute->is_taxonomy() ) {
@@ -65,7 +65,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 
 				echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-			?></td>
-		</tr>
+			?></li>
 	<?php endforeach; ?>
-</table>
+<?php else : ?>
+	<table class="shop_attributes">
+		<?php if ( $display_dimensions && $product->has_weight() ) : ?>
+			<tr>
+				<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
+				<td class="product_weight"><?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></td>
+			</tr>
+		<?php endif; ?>
+
+		<?php if ( $display_dimensions && $product->has_dimensions() ) : ?>
+			<tr>
+				<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+				<td class="product_dimensions"><?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></td>
+			</tr>
+		<?php endif; ?>
+
+		<?php foreach ( $attributes as $attribute ) : ?>
+			<tr>
+				<th><?php echo wc_attribute_label( $attribute->get_name() ); ?></th>
+				<td><?php
+					$values = array();
+
+					if ( $attribute->is_taxonomy() ) {
+						$attribute_taxonomy = $attribute->get_taxonomy_object();
+						$attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
+
+						foreach ( $attribute_values as $attribute_value ) {
+							$value_name = esc_html( $attribute_value->name );
+
+							if ( $attribute_taxonomy->attribute_public ) {
+								$values[] = '<a href="' . esc_url( get_term_link( $attribute_value->term_id, $attribute->get_name() ) ) . '" rel="tag">' . $value_name . '</a>';
+							} else {
+								$values[] = $value_name;
+							}
+						}
+					} else {
+						$values = $attribute->get_options();
+
+						foreach ( $values as &$value ) {
+							$value = make_clickable( esc_html( $value ) );
+						}
+					}
+
+					echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+				?></td>
+			</tr>
+		<?php endforeach; ?>
+	</table>
+<?php  endif; ?>

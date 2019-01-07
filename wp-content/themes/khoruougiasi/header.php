@@ -10,6 +10,7 @@
     <?php wp_head() ?>
 </head>
 <body <?php body_class(); ?>>
+  <div class="preloader"><i class="fa fa-spinner"></i></div>
 <div class="menu-rs">
     <div class="menu-wrap">
         <div class="r-mv">
@@ -107,7 +108,7 @@
                                                 <div class="col col-xs-6">
                                                     <strong>Total:</strong>
                                                 </div>
-                                                <div class="col col-xs-6 text-right f-bold"><?php echo WC()->cart->cart_contents_total;?></div>
+                                                <div class="col col-xs-6 text-right f-bold bag_cart"><?php echo wc_price(WC()->cart->cart_contents_total);?></div>
                                             </li>
                                         </ul>
                                     </li>

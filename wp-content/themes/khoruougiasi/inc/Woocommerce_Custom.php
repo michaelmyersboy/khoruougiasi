@@ -58,18 +58,21 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 }
 remove_action('woocommerce_cart_collaterals','woocommerce_cross_sell_display');
 remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
-
-function woocommerce_button_proceed_to_checkout() {
-    $checkout_url = WC()->cart->get_checkout_url(); ?>
-    <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button alt wc-forward ht-btn bg-dc4c46">Check Out
-    </a>
-    <a href="<?php echo esc_url( get_permalink( woocommerce_get_page_id( 'shop' ) ) );?>" class="checkout-button alt wc-forward ht-btn bg-2 m-t-20">Continue Shopping
-    </a>
-    <?php
-}
-
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating',10);
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40);
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
-
+function woocommerce_template_single_add_to_cart_custom() {
+    global $product;
+    echo "<li class='product_details_qty'>";
+    do_action( 'woocommerce_' . $product->get_type() . '_add_to_cart' );
+    echo "</li>";
+}
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart_custom', 30 );
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
  switch( $currency ) {
  case 'VND': $currency_symbol = 'VND'; break;
@@ -292,7 +295,7 @@ function woocommerce_form_field_custom( $key, $args, $value = null ) {
       }
   }
   function wpb_custom_billing_fields( $fields = array() ) {
-  	unset($fields['billing_address_2']);  	
+  	unset($fields['billing_address_2']);
   	return $fields;
   }
   add_filter('woocommerce_billing_fields','wpb_custom_billing_fields');

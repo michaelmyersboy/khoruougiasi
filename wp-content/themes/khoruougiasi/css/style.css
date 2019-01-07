@@ -1323,9 +1323,10 @@ section .ht-tabs ul li a,.ht-tabs ul li.active a{
 	background:#fafafa;
 	margin-right:5px;
 }
-.cart .dropdown-menu .media a  img{
-	width:50px!important;
-	height: auto;
+.cart .dropdown-menu .media a img {
+    width: 50px!important;
+    height: auto;
+    max-width: initial;
 }
 .cart .cart-item > span{
 	padding:4px 6px;

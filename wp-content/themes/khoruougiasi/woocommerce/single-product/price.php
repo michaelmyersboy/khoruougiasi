@@ -21,6 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product;
-
 ?>
-<p class="price"><?php echo $product->get_price_html(); ?></p>
+<li class="color-9"><p class="price f-40"><?php echo wc_price($product->get_price()); ?></p>
+	<?php
+		if($product->regular_price!=0):
+			$percent = round( 100 - ( ($product->price * 100)/$product->regular_price ),2);
+		?>
+			<span class="old_price">Old price: <?php echo wc_price($product->regular_price); ?> (-<?php echo $percent; ?>%)</span>
+			<?php endif; ?>
+
+</li>
+<?php echo wc_display_product_attributes($product);?>
