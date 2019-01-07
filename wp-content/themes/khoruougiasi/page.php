@@ -1,33 +1,26 @@
-<?php
-
-get_header(); ?>
-
-<div class="main-content">
-    <?php
-    // Start the loop.
-    while ( have_posts() ) : the_post(); ?>
-
-
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-            </header><!-- .entry-header -->
-            <div class="entry-content">
-                <?php
-                the_content();
-
-                ?>
-            </div><!-- .entry-content -->
-        </article><!-- #post-## -->
-
-        <?php if ( comments_open() || get_comments_number() ) {
-            comments_template();
-        }
-
-        // End of the loop.
-    endwhile;
-    ?>
-</div><!-- .content-area -->
-
-
+<?php get_header(); ?>
+<section class="bg-fbf9f2">
+  <div class="container">
+    <div class="content">
+      <div class="title-group underline-double">
+        <?php if (get_field('minium_title')):?>
+        <h5 class="sub-title"><?php get_field('minium_title')?></h5>
+        <?php endif; ?>
+        <h2 class="selected"><?php the_title(); ?></h2>
+        <p class="line-mix star-group">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </p>
+      </div>
+      <div class="row">
+         <?php  while ( have_posts() ) : the_post(); ?>
+           <?php
+              the_content();
+           ?>
+         <?php endwhile; ?>
+      </div>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>

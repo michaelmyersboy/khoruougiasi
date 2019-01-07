@@ -1,6 +1,9 @@
 <section class="p-0">
     <div class="container">
-        <div class="bg-540b23">
+        <div class="bg-540b23"
+        <?php if (get_sub_field('background_color')) :?>
+              style='background-color:<?php echo get_sub_field('background_color') ?> !important;'
+          <?php endif; ?>>
             <div class="row">
                 <div class="col-sm-7">
                     <div class="p-bn">

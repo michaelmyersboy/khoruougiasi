@@ -1,0 +1,37 @@
+2019-01-06T05:27:37+00:00 CRITICAL syntax error, unexpected ';', expecting ':' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\form-shipping.php on line 67
+
+2019-01-06T09:17:55+00:00 CRITICAL Uncaught Error: Call to undefined function get_coupons() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\review-order.php:108
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2084): wc_get_template('checkout/review...', Array)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_order_review('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\form-checkout.php(47): do_action('woocommerce_che...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+ in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\review-order.php on line 108
+
+2019-01-06T09:18:19+00:00 CRITICAL Uncaught Error: Call to undefined method WC_Checkout::get_coupons() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\review-order.php:108
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2084): wc_get_template('checkout/review...', Array)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_order_review('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\form-checkout.php(47): do_action('woocommerce_che...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\h in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\review-order.php on line 108
+
+2019-01-06T09:21:15+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\class-wc-cart.php:1637
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\review-order.php(108): WC_Cart::get_coupons()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2084): wc_get_template('checkout/review...', Array)
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_order_review('')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\checkout\form-checkout.php(47): do_action('woocommerce_c in C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\class-wc-cart.php on line 1637
+
+2019-01-06T10:03:46+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\inc\Woocommerce_Custom.php on line 286
+
+2019-01-06T10:04:12+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\inc\Woocommerce_Custom.php on line 286
+

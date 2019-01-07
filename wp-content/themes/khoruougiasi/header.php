@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="BEz5Ptumooi6xgv-U05P-WbMmk7uqU7qz4tC2p7mfj0" />
     <title><?php echo   get_bloginfo(); ?></title>
     <link rel="icon" href="<?php echo get_template_directory_uri() . "/favicon.ico";?> ">
     <?php wp_head() ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+  <div class="preloader"><i class="fa fa-spinner"></i></div>
 <div class="menu-rs">
     <div class="menu-wrap">
         <div class="r-mv">
@@ -106,7 +108,7 @@
                                                 <div class="col col-xs-6">
                                                     <strong>Total:</strong>
                                                 </div>
-                                                <div class="col col-xs-6 text-right f-bold"><?php echo WC()->cart->cart_contents_total;?></div>
+                                                <div class="col col-xs-6 text-right f-bold bag_cart"><?php echo wc_price(WC()->cart->cart_contents_total);?></div>
                                             </li>
                                         </ul>
                                     </li>

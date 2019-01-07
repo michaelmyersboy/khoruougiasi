@@ -4,7 +4,7 @@
 
 function addScriptsToHead()
 {
-    wp_enqueue_script( 'jqueryJs',get_template_directory_uri() . "/js/jquery-2.2.4.min.js", array ( 'jquery' ), 1.1, true);
+
     wp_enqueue_style('jquery', get_template_directory_uri() . "/css/jquery-ui.css", array(), '1.1', 'all');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . "/css/bootstrap.min.css", array(), '1.1', 'all');
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . "/css/owl.carousel.css", array(), '1.1', 'all');
@@ -16,6 +16,7 @@ function addScriptsToHead()
     wp_enqueue_style('css', get_template_directory_uri() . "/css/css.css", array(), '1.1', 'all');
     wp_enqueue_style('style1', get_template_directory_uri() . "/css/style.css", array(), '1.1', 'all');
     wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_script( 'jqueryJs',get_template_directory_uri() . "/js/jquery-2.2.4.min.js", array ( 'jquery' ), 1.1, true);
 }
 add_action('wp_head', 'addScriptsToHead');
 //add script to footer
@@ -56,7 +57,7 @@ require get_parent_theme_file_path( '/inc/Theme_Header_Menu_Walker.php' );
 //customer Widget
 function widgetsInit() {
     register_sidebar( array(
-        'name'          => 'footer',
+        'name'          => 'Footer',
         'id'            => 'widget_footer',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
@@ -64,8 +65,8 @@ function widgetsInit() {
         'after_title'   => '</h2>'
     ) );
     register_sidebar( array(
-        'name'          => 'cart',
-        'id'            => 'widget_cart',
+        'name'          => 'Left SlideBar Category Product',
+        'id'            => 'widget_product_list',
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
@@ -80,4 +81,30 @@ add_action( 'widgets_init', function(){
 require get_parent_theme_file_path( '/inc/Footer_Html_Widget.php' );
 //woocommerce
 require get_parent_theme_file_path( '/inc/Woocommerce_Custom.php' );
+include get_template_directory() . '/inc/class-wc-widget-price-custom-filter.php';
 
+add_action("widgets_init", "load_custom_widgets");
+function load_custom_widgets() {
+unregister_widget("WC_Widget_Price_Filter");
+register_widget("WC_Widget_Price_Custom_Filter");
+}
+//post setting
+add_filter ('get_archives_link',
+function ($link_html, $url, $text, $format, $before, $after) {
+  $after = str_replace("&nbsp;", "", $after);
+  $after = str_replace(")", "", $after);
+  $after = str_replace("(", "", $after);
+  $link_html = "<li><a href='$url'>"
+             . "$text"
+             . '</a><span class="pull-right color-8 f-normal">'.$after.'</span></li>';
+
+    return $link_html;
+}, 10, 6);
+function wpb_move_comment_field_to_bottom( $fields ) {
+$comment_field = $fields['comment'];
+unset( $fields['comment'] );
+$fields['comment'] = $comment_field;
+return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );

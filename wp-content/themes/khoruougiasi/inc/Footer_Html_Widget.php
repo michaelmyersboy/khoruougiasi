@@ -110,7 +110,7 @@ class  Footer_Html_Widget extends  WP_Widget{
         return $html;
     }
     private function widgetEmail($title,$content) {
-        $html= '<div class="col-sm-4">';
+        $html= '<div class="col-sm-4 newletter">';
         $html.=  '<h4>'.$title.'</h4>';
         $html.=   html_entity_decode($content);
         $html.=  '</div>';

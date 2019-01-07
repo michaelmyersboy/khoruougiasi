@@ -1,0 +1,152 @@
+2019-01-05T02:16:38+00:00 CRITICAL Uncaught Error: Call to undefined function twentyseventeen_get_svg() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:114
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 114
+
+2019-01-05T02:20:21+00:00 CRITICAL syntax error, unexpected ')', expecting end of file in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 127
+
+2019-01-05T02:32:42+00:00 CRITICAL Uncaught Error: Call to undefined function twentyseventeen_time_link() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\template-parts\post\content.php:28
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(690): require()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template.php(647): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php(29): get_template_part('template-parts/...', '')
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\template-parts\post\content.php on line 28
+
+2019-01-05T02:42:24+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 213
+
+2019-01-05T02:43:47+00:00 CRITICAL Uncaught Error: Call to undefined function pagination() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:124
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 124
+
+2019-01-05T02:45:26+00:00 CRITICAL Uncaught Error: Call to undefined function pagination() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:126
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 126
+
+2019-01-05T02:48:14+00:00 CRITICAL Uncaught Error: Call to undefined function pagination() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:125
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 125
+
+2019-01-05T03:21:19+00:00 CRITICAL syntax error, unexpected '?', expecting ';' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 75
+
+2019-01-05T03:53:42+00:00 CRITICAL syntax error, unexpected 'pull' (T_STRING) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\functions.php on line 94
+
+2019-01-05T03:58:54+00:00 CRITICAL syntax error, unexpected '$text' (T_VARIABLE) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\functions.php on line 104
+
+2019-01-05T04:42:46+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:129
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 129
+
+2019-01-05T04:42:50+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:129
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 129
+
+2019-01-05T04:43:07+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:129
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 129
+
+2019-01-05T04:43:20+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:129
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 129
+
+2019-01-05T04:43:43+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:126
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 126
+
+2019-01-05T04:43:50+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php:126
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\archive.php on line 126
+
+2019-01-05T04:52:01+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php:30
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-includes\template-loader.php(74): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\git\khoruougiasi\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 30
+
+2019-01-05T04:58:33+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 30
+
+2019-01-05T05:15:26+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 50
+
+2019-01-05T05:19:27+00:00 CRITICAL syntax error, unexpected '=' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 51
+
+2019-01-05T07:45:52+00:00 CRITICAL syntax error, unexpected 'author' (T_STRING) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 76
+
+2019-01-05T07:48:34+00:00 CRITICAL syntax error, unexpected 'email' (T_STRING) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 83
+
+2019-01-05T07:51:06+00:00 CRITICAL syntax error, unexpected 'comment' (T_STRING), expecting ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 84
+
+2019-01-05T07:52:10+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 81
+
+2019-01-05T08:28:58+00:00 CRITICAL syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\single.php on line 95
+
+2019-01-05T18:04:37+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php on line 42
+
+2019-01-05T18:06:12+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php on line 113
+
+2019-01-05T18:23:41+00:00 CRITICAL Uncaught Error: Call to undefined function get_url_site() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php:36
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1911): wc_get_template('cart/cart-total...')
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_cart_totals('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php(144): do_action('woocommerce_car...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\git\kh in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php on line 36
+
+2019-01-05T18:23:55+00:00 CRITICAL Uncaught Error: Call to undefined function get_url_site() in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php:36
+Stack trace:
+#0 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include()
+#1 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1911): wc_get_template('cart/cart-total...')
+#2 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(286): woocommerce_cart_totals('')
+#3 C:\xampp\htdocs\git\khoruougiasi\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 C:\xampp\htdocs\git\khoruougiasi\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#5 C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart.php(144): do_action('woocommerce_car...')
+#6 C:\xampp\htdocs\git\khoruougiasi\wp-content\plugins\woocommerce\includes\wc-core-functions.php(208): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\git\kh in C:\xampp\htdocs\git\khoruougiasi\wp-content\themes\khoruougiasi\woocommerce\cart\cart-totals.php on line 36
+
